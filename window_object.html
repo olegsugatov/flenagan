@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Window Object</title>
+</head>
+<body>
+<script type="text/javascript">
+	function moveon() {
+		var answer = confirm ("Ready to move on?");			// вывыдоит модальный диалог
+		if (answer) window.location = "https://google.com"; // загружает нужную страницу после клика на Ok
+	}
+	setTimeout(moveon, 60000);								// запускает функцию через 1 минуту (60000 милисекунд)
+</script>
+</body>
+</html>

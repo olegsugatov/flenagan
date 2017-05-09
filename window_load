@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hide Element</title>
+</head>
+<body>
+	<script>
+		window.onload = function() { 
+			var images = document.getElementByTagName("img");	// найти все img
+			for (var i = 1; i < images.length; i++) {			// обойти все в цикле и присвоить событие click
+				var image = images[i];
+				if(image.addEventListener)
+					image.addEventListener("click", hide, false);
+				else
+					image.attachEvents("onclick", hide);		// ie8 and lower fix
+			}
+			function hide(event) { event.target.style.visibility = "hidden"; } // event handler
+		}
+	</script>
+</body>
+</html>

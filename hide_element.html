@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hide Element</title>
+</head>
+<body>
+	<script>
+		function hide(e, reflow) {
+			if(reflow) {
+				e.style.display = "none";
+			} else {
+				e.style.visibility = "hidden";
+			}
+		}
+
+		function highlight(e) {
+			if (!e.className) e.className = "hilite";
+			else e.className += "hilite" 
+		}
+	
+	</script>
+</body>
+</html>
